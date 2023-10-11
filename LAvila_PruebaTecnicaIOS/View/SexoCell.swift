@@ -7,7 +7,8 @@ class SexoCell: UITableViewCell {
     
     weak var controller : FormController?
     var selectedRows = [IndexPath]()
-    
+   
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,7 +40,7 @@ extension SexoCell : UITableViewDelegate, UITableViewDataSource{
         if indexPath.row == 0{
             cell.lblGenero.text = "Masculino"
         }
-
+        
         else if indexPath.row == 1{
             cell.lblGenero.text = "Femenino"
         }
@@ -57,29 +58,53 @@ extension SexoCell : UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    @objc func CheckboxClicked(_ sender : UIButton){
-        sender.isSelected = !sender.isSelected
-        
+//    @objc func CheckboxClicked(_ sender : UIButton){
+//
+//        sender.isSelected = !sender.isSelected
+//        
+//        let point = sender.convert(CGPoint.zero, to: tableViewSexo)
+//        let indxPath = tableViewSexo.indexPathForRow(at: point)
+//        
+//        if selectedRows.contains(indxPath!) {
+//            selectedRows.remove(at: selectedRows.firstIndex(of: indxPath!)!)
+//        } else {
+//            selectedRows.append(indxPath!)
+//        }
+//
+//        tableViewSexo.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .fade)
+//        
+//        if selectedRows.count > 1{
+//            
+//
+//            selectedRows.removeFirst()
+//         selectedRows.removeLast()
+//            sender.isSelected = false
+//            self.tableViewSexo.reloadData()
+//        }
+//            
+//    }
+    
+    @objc func CheckboxClicked(_ sender : UIButton) {
         let point = sender.convert(CGPoint.zero, to: tableViewSexo)
         let indxPath = tableViewSexo.indexPathForRow(at: point)
         
-        if selectedRows.contains(indxPath!) {
-            selectedRows.remove(at: selectedRows.firstIndex(of: indxPath!)!)
+        if sender.isSelected {
+           
         } else {
-            selectedRows.append(indxPath!)
-        }
-        
-        tableViewSexo.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .fade)
-        
-        if selectedRows.count > 1{
             
-            selectedRows.removeFirst()
-
-            sender.isSelected = false
-            self.tableViewSexo.reloadData()
+            for indexPath in selectedRows {
+                if let cell = tableViewSexo.cellForRow(at: indexPath) as? GeneroCell {
+                    cell.btnCheck.isSelected = false 
+                }
+            }
+            selectedRows.removeAll()
+            sender.isSelected = true
+            if let indexPath = indxPath {
+                selectedRows.append(indexPath)
+            }
         }
         
+        tableViewSexo.reloadData()
     }
-    
-    
+
 }
