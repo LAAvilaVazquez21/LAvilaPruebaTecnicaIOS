@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F9DD492B57646F7E3D948A2 /* Pods_LAvila_PruebaTecnicaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA46779446307F970EB9E94D /* Pods_LAvila_PruebaTecnicaIOS.framework */; };
 		7AFA0AC32AD5FFA400246596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA0AC22AD5FFA400246596 /* AppDelegate.swift */; };
 		7AFA0AC52AD5FFA400246596 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA0AC42AD5FFA400246596 /* SceneDelegate.swift */; };
 		7AFA0AC72AD5FFA400246596 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA0AC62AD5FFA400246596 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		274FEA06D5D7535597AAFB93 /* Pods-LAvila_PruebaTecnicaIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAvila_PruebaTecnicaIOS.release.xcconfig"; path = "Target Support Files/Pods-LAvila_PruebaTecnicaIOS/Pods-LAvila_PruebaTecnicaIOS.release.xcconfig"; sourceTree = "<group>"; };
 		7AFA0ABF2AD5FFA400246596 /* LAvila_PruebaTecnicaIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LAvila_PruebaTecnicaIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AFA0AC22AD5FFA400246596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AFA0AC42AD5FFA400246596 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,8 @@
 		7AFA0B012AD61FA200246596 /* GeneroCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneroCell.xib; sourceTree = "<group>"; };
 		7AFA0B042AD6239000246596 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		7AFA0B052AD6239000246596 /* ColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCell.xib; sourceTree = "<group>"; };
+		BFDD59C763556CC381CD80CA /* Pods-LAvila_PruebaTecnicaIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAvila_PruebaTecnicaIOS.debug.xcconfig"; path = "Target Support Files/Pods-LAvila_PruebaTecnicaIOS/Pods-LAvila_PruebaTecnicaIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		CA46779446307F970EB9E94D /* Pods_LAvila_PruebaTecnicaIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LAvila_PruebaTecnicaIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,17 +81,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F9DD492B57646F7E3D948A2 /* Pods_LAvila_PruebaTecnicaIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		534092578342F2002B592347 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFDD59C763556CC381CD80CA /* Pods-LAvila_PruebaTecnicaIOS.debug.xcconfig */,
+				274FEA06D5D7535597AAFB93 /* Pods-LAvila_PruebaTecnicaIOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		75DEBFC76C903C0F5CBAA6D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA46779446307F970EB9E94D /* Pods_LAvila_PruebaTecnicaIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7AFA0AB62AD5FFA400246596 = {
 			isa = PBXGroup;
 			children = (
 				7AFA0AC12AD5FFA400246596 /* LAvila_PruebaTecnicaIOS */,
 				7AFA0AC02AD5FFA400246596 /* Products */,
+				534092578342F2002B592347 /* Pods */,
+				75DEBFC76C903C0F5CBAA6D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7AFA0AD32AD5FFA600246596 /* Build configuration list for PBXNativeTarget "LAvila_PruebaTecnicaIOS" */;
 			buildPhases = (
+				626E35E46382D35C2CD706EF /* [CP] Check Pods Manifest.lock */,
 				7AFA0ABB2AD5FFA400246596 /* Sources */,
 				7AFA0ABC2AD5FFA400246596 /* Frameworks */,
 				7AFA0ABD2AD5FFA400246596 /* Resources */,
+				51D9A788DF280B411E20C00D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +269,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51D9A788DF280B411E20C00D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LAvila_PruebaTecnicaIOS/Pods-LAvila_PruebaTecnicaIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LAvila_PruebaTecnicaIOS/Pods-LAvila_PruebaTecnicaIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LAvila_PruebaTecnicaIOS/Pods-LAvila_PruebaTecnicaIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		626E35E46382D35C2CD706EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LAvila_PruebaTecnicaIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7AFA0ABB2AD5FFA400246596 /* Sources */ = {
@@ -327,7 +395,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -390,7 +458,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -411,6 +479,7 @@
 		};
 		7AFA0AD42AD5FFA600246596 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFDD59C763556CC381CD80CA /* Pods-LAvila_PruebaTecnicaIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -439,6 +508,7 @@
 		};
 		7AFA0AD52AD5FFA600246596 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 274FEA06D5D7535597AAFB93 /* Pods-LAvila_PruebaTecnicaIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

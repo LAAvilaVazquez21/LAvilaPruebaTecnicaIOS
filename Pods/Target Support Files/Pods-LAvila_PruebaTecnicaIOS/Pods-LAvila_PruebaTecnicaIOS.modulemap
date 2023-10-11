@@ -1,0 +1,6 @@
+framework module Pods_LAvila_PruebaTecnicaIOS {
+  umbrella header "Pods-LAvila_PruebaTecnicaIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
